@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT",
+    "category": "AI Chat",
+    "description": "AI assistant for writing, coding, and brainstorming",
+    "url": "https://chat.openai.com"
+  },
+  {
+    "id": 2,
+    "name": "Midjourney",
+    "category": "Image Generation",
+    "description": "Generate high quality AI images",
+    "url": "https://midjourney.com"
+  },
+  {
+    "id": 3,
+    "name": "GitHub Copilot",
+    "category": "Developer Tools",
+    "description": "AI pair programmer",
+    "url": "https://github.com/features/copilot"
+  }
+]
