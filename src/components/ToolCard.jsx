@@ -1,31 +1,42 @@
-export default function ToolCard({ tool }) {
+export default function ToolCard({ tool, onClick, onToggleFavorite, isFavorite }) {
   return (
-    <a
-      href={tool.url}
-      target="_blank"
-      rel="noreferrer"
-      className="
-        group block rounded-2xl border bg-white dark:bg-slate-800 p-6
-        hover:shadow-xl transition-all duration-300
-      "
+    <div
+      onClick={() => onClick(tool)}
+      className="relative cursor-pointer rounded-xl border border-slate-200
+                 dark:border-slate-700 bg-white dark:bg-slate-800
+                 p-6 hover:shadow-lg transition"
     >
-      <div className="flex items-start justify-between mb-4">
-        <h3 className="text-xl font-semibold group-hover:text-primary">
-          {tool.name}
-        </h3>
-        <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
-          {tool.category}
+
+      {/* ⭐ Favorite Button */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation(); // 🚨 prevent modal open
+          onToggleFavorite(tool.id);
+        }}
+        className="absolute top-3 left-3 text-xl"
+      >
+        {isFavorite ? "⭐" : "☆"}
+      </button>
+
+      {tool.featured && (
+        <span className="absolute top-3 right-3 text-xs font-semibold
+                         bg-yellow-400 text-black px-3 py-1 rounded-full">
+          Featured
         </span>
-      </div>
+      )}
 
-      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+      <h3 className="text-xl font-semibold mb-2 dark:text-white">
+        {tool.name}
+      </h3>
 
+      <p className="text-slate-600 dark:text-slate-400 mb-4">
         {tool.description}
       </p>
 
-      <div className="mt-5 text-sm font-medium text-primary">
-        Visit Tool →
-      </div>
-    </a>
-  )
+      <span className="inline-block text-xs bg-slate-100 dark:bg-slate-700
+                       text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full">
+        {tool.category}
+      </span>
+    </div>
+  );
 }
