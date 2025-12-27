@@ -2,19 +2,17 @@ import ToolCard from "./ToolCard";
 
 export default function ToolGrid({
   tools,
-  onToolClick,
   favorites,
   onToggleFavorite
 }) {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {tools.map(tool => (
         <ToolCard
           key={tool.id}
           tool={tool}
-          onClick={onToolClick}
+          favorites={favorites}
           onToggleFavorite={onToggleFavorite}
-          isFavorite={favorites.includes(tool.id)}
         />
       ))}
     </div>

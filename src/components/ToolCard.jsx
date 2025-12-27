@@ -1,31 +1,45 @@
-export default function ToolCard({ tool, onClick, onToggleFavorite, isFavorite }) {
+import { useNavigate } from "react-router-dom";
+
+export default function ToolCard({
+  tool,
+  favorites = [],
+  onToggleFavorite
+}) {
+  const navigate = useNavigate();
+  const isFavorite = favorites.includes(tool.id);
+
+  const handleCardClick = () => {
+    navigate(`/tools/${tool.slug}`);
+  };
+
   return (
     <div
-      onClick={() => onClick(tool)}
+      onClick={handleCardClick}
       className="relative cursor-pointer rounded-xl border border-slate-200
                  dark:border-slate-700 bg-white dark:bg-slate-800
                  p-6 hover:shadow-lg transition"
     >
+      {/* Featured */}
+      {tool.featured && (
+        <span className="absolute top-3 right-3 text-xs font-semibold
+                         bg-yellow-400 text-black px-3 py-1 rounded-full">
+          ⭐ Featured
+        </span>
+      )}
 
-      {/* ⭐ Favorite Button */}
+      {/* Favorite */}
       <button
         onClick={(e) => {
-          e.stopPropagation(); // 🚨 prevent modal open
+          e.stopPropagation(); // 🔑 VERY IMPORTANT
           onToggleFavorite(tool.id);
         }}
         className="absolute top-3 left-3 text-xl"
       >
-        {isFavorite ? "⭐" : "☆"}
+        {isFavorite ? "❤️" : "🤍"}
       </button>
 
-      {tool.featured && (
-        <span className="absolute top-3 right-3 text-xs font-semibold
-                         bg-yellow-400 text-black px-3 py-1 rounded-full">
-          Featured
-        </span>
-      )}
-
-      <h3 className="text-xl font-semibold mb-2 dark:text-white">
+      {/* Content */}
+      <h3 className="text-xl font-semibold mb-2 mt-6 dark:text-white">
         {tool.name}
       </h3>
 
