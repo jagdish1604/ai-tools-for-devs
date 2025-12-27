@@ -1,59 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://aitoolsfordev.com/</loc>
+    <loc>https://aitoolsfordev.com</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url><loc>https://aitoolsfordev.com/tool/chatgpt</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/claude</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/google-gemini</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/perplexity-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/midjourney</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/dall-e</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/stable-diffusion</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/leonardo-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/gitHub-copilot</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/cursor</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/tabnine</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/codeium</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/replit-ghostwriter</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/notion-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/grammarly</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/jasper</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/copy-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/writesonic</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/canva-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/remove-bg</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/adobe-firefly</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/runway</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/pictory</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/synthesia</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/descript</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/elevenlabs</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/murf-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/tome</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/gamma</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/zapier-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/make</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/surfer-seo</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/ahrefs</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/hubspot-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/adcreative-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/durable</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/framer-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/kickresume</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/resume-io</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/otter-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/fireflies-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/figma-ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/looka</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/chatpdf</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/humata</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/deepL</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/quillBot</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/krisp</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/beautiful.ai</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-<url><loc>https://aitoolsfordev.com/tool/uizard</loc><lastmod>2025-01-20</lastmod><priority>0.8</priority></url>
-
+  <url>
+    <loc>https://aitoolsfordev.com/tools/chatgpt</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/claude</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/google-gemini</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/perplexity-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/midjourney</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/dall-e</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/stable-diffusion</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/leonardo-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/github-copilot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/cursor</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/tabnine</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/codeium</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/replit-ghostwriter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/notion-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/grammarly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/jasper</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/copy-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/writesonic</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/canva-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/remove-bg</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/adobe-firefly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/runway</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/pictory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/synthesia</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/descript</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/elevenlabs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/murf-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/tome</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/gamma</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/zapier-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/make</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/surfer-seo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/ahrefs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/hubspot-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/adcreative-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/durable</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/framer-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/kickresume</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/resume-io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/otter-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/fireflies-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/figma-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/looka</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/chatpdf</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/humata</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/deepl</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/quillbot</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/krisp</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/beautiful-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aitoolsfordev.com/tools/uizard</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

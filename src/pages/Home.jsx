@@ -6,6 +6,7 @@ import ToolGrid from "../components/ToolGrid";
 import DarkModeToggle from "../components/DarkModeToggle";
 import SortDropdown from "../components/SortDropdown";
 import ToolModal from "../components/ToolModal";
+import { useMemo } from "react";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -20,11 +21,20 @@ const [favorites, setFavorites] = useState(() => {
   const categories = ["All", ...Array.from(new Set(toolsData.map(tool => tool.category)))];
 
   // Filter tools based on search and category
-  const filteredTools = toolsData.filter(tool => {
-    const matchesSearch = tool.name.toLowerCase().includes(search.toLowerCase());
-    const matchesCategory = category === "All" || tool.category === category;
+ 
+  const filteredTools = useMemo(() => {
+  return toolsData.filter(tool => {
+    const matchesSearch = tool.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    const matchesCategory =
+      category === "All" || tool.category === category;
+
     return matchesSearch && matchesCategory;
   });
+}, [search, category]);
+
 const toggleFavorite = (id) => {
   setFavorites(prev => {
     const updated = prev.includes(id)
