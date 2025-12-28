@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import GoRedirect from "./pages/GoRedirect";
 import { lazy, Suspense } from "react";
+ import SubmitTool from "./pages/SubmitTool";
+import CategoryPage from "./pages/CategoryPage";
 
 const ToolDetail = lazy(() => import("./pages/ToolDetail"));
 
@@ -15,6 +17,9 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/tools/:slug" element={<ToolDetail />} />
     <Route path="/go/:slug" element={<GoRedirect />} />
+    <Route path="/submit" element={<SubmitTool />} />
+    <Route path="/category/:category" element={<CategoryPage />} />
+
   </Routes>
 </Suspense>
 

@@ -5,9 +5,20 @@ const tools = require("../src/data/tools.json");
 
 const DOMAIN = "https://aitoolsfordev.com";
 
+/* Static pages */
 const staticPages = [""];
+
+/* Tool detail pages */
 const toolPages = tools.map(tool => `/tools/${tool.slug}`);
-const urls = [...staticPages, ...toolPages];
+
+/* Category pages */
+const categories = [...new Set(tools.map(tool => tool.category))];
+const categoryPages = categories.map(
+  category => `/category/${encodeURIComponent(category)}`
+);
+
+/* Combine all URLs */
+const urls = [...staticPages, ...toolPages, ...categoryPages];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -25,7 +36,7 @@ ${urls
 
 fs.writeFileSync(
   path.join(__dirname, "../public/sitemap.xml"),
-  sitemap
+  sitemap.trim()
 );
 
 console.log("✅ sitemap.xml generated successfully");
