@@ -1,65 +1,65 @@
 [
   { "id": 1, "slug": "chatgpt", "name": "ChatGPT", "category": "AI Chat", "description": "AI assistant for writing, coding, and brainstorming", "url": "https://chat.openai.com", "featured": true, "addedAt": "2025-12-20", "logo": "/logos/chatgpt.png" },
 
-  { "id": 2, "slug": "claude", "name": "Claude", "category": "AI Chat", "description": "AI assistant focused on reasoning and safety", "url": "https://claude.ai", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/chatgpt.png" },
+  { "id": 2, "slug": "claude", "name": "Claude", "category": "AI Chat", "description": "AI assistant focused on reasoning and safety", "url": "https://claude.ai", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/claude.png" },
 
-  { "id": 3, "slug": "google-gemini", "name": "Google Gemini", "category": "AI Chat", "description": "Google AI assistant powered by Gemini models", "url": "https://gemini.google.com", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/chatgpt.png" },
+  { "id": 3, "slug": "google-gemini", "name": "Google Gemini", "category": "AI Chat", "description": "Google AI assistant powered by Gemini models", "url": "https://gemini.google.com", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/gemini.png" },
 
-  { "id": 4, "slug": "perplexity-ai", "name": "Perplexity AI", "category": "AI Search", "description": "AI-powered search engine with citations", "url": "https://www.perplexity.ai", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/chatgpt.png" },
+  { "id": 4, "slug": "perplexity-ai", "name": "Perplexity AI", "category": "AI Search", "description": "AI-powered search engine with citations", "url": "https://www.perplexity.ai", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/perplexity.png" },
 
-  { "id": 5, "slug": "midjourney", "name": "Midjourney", "category": "Image Generation", "description": "Generate high-quality AI images from prompts", "url": "https://www.midjourney.com", "featured": true, "addedAt": "2025-12-19", "logo": "/logos/chatgpt.png" },
+  { "id": 5, "slug": "midjourney", "name": "Midjourney", "category": "Image Generation", "description": "Generate high-quality AI images from prompts", "url": "https://www.midjourney.com", "featured": true, "addedAt": "2025-12-19", "logo": "/logos/midjourney.png" },
 
   { "id": 6, "slug": "dall-e", "name": "DALL·E", "category": "Image Generation", "description": "Create images from text prompts", "url": "https://openai.com/dall-e", "featured": true, "addedAt": "2025-12-22", "logo": "/logos/chatgpt.png" },
 
-  { "id": 7, "slug": "stable-diffusion", "name": "Stable Diffusion", "category": "Image Generation", "description": "Open-source AI image generation model", "url": "https://stability.ai", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/chatgpt.png" },
+  { "id": 7, "slug": "stable-diffusion", "name": "Stable Diffusion", "category": "Image Generation", "description": "Open-source AI image generation model", "url": "https://stability.ai", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/stable-diffusion.png" },
 
-  { "id": 8, "slug": "leonardo-ai", "name": "Leonardo AI", "category": "Image Generation", "description": "AI image generation for creatives and designers", "url": "https://leonardo.ai", "affiliateUrl": "https://leonardo.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/chatgpt.png" },
+  { "id": 8, "slug": "leonardo-ai", "name": "Leonardo AI", "category": "Image Generation", "description": "AI image generation for creatives and designers", "url": "https://leonardo.ai", "affiliateUrl": "https://leonardo.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/leonardo-ai.png" },
 
-  { "id": 9, "slug": "github-copilot", "name": "GitHub Copilot", "category": "Developer Tools", "description": "AI pair programmer for developers", "url": "https://github.com/features/copilot", "featured": true, "addedAt": "2025-12-22", "logo": "/logos/chatgpt.png" },
+  { "id": 9, "slug": "github-copilot", "name": "GitHub Copilot", "category": "Developer Tools", "description": "AI pair programmer for developers", "url": "https://github.com/features/copilot", "featured": true, "addedAt": "2025-12-22", "logo": "/logos/github-copilot.png" },
 
-  { "id": 10, "slug": "cursor", "name": "Cursor", "category": "Developer Tools", "description": "AI-powered code editor", "url": "https://cursor.sh", "featured": false, "addedAt": "2025-12-19", "logo": "/logos/chatgpt.png" },
+  { "id": 10, "slug": "cursor", "name": "Cursor", "category": "Developer Tools", "description": "AI-powered code editor", "url": "https://cursor.sh", "featured": false, "addedAt": "2025-12-19", "logo": "/logos/cursor.png" },
 
-  { "id": 11, "slug": "tabnine", "name": "Tabnine", "category": "Developer Tools", "description": "AI code completion tool", "url": "https://www.tabnine.com", "affiliateUrl": "https://www.tabnine.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/chatgpt.png" },
+  { "id": 11, "slug": "tabnine", "name": "Tabnine", "category": "Developer Tools", "description": "AI code completion tool", "url": "https://www.tabnine.com", "affiliateUrl": "https://www.tabnine.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/tabnine.png" },
 
-  { "id": 12, "slug": "codeium", "name": "Codeium", "category": "Developer Tools", "description": "Free AI coding assistant", "url": "https://codeium.com", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/chatgpt.png" },
+  { "id": 12, "slug": "codeium", "name": "Codeium", "category": "Developer Tools", "description": "Free AI coding assistant", "url": "https://codeium.com", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/codeium.png" },
 
-  { "id": 13, "slug": "replit-ghostwriter", "name": "Replit Ghostwriter", "category": "Developer Tools", "description": "AI coding assistant inside Replit", "url": "https://replit.com", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/chatgpt.png" },
+  { "id": 13, "slug": "replit-ghostwriter", "name": "Replit Ghostwriter", "category": "Developer Tools", "description": "AI coding assistant inside Replit", "url": "https://replit.com", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/replit-ghostwriter.png" },
 
-  { "id": 14, "slug": "notion-ai", "name": "Notion AI", "category": "Productivity", "description": "AI-powered writing and workspace assistant", "url": "https://www.notion.so", "affiliateUrl": "https://www.notion.so/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-20", "logo": "/logos/chatgpt.png" },
+  { "id": 14, "slug": "notion-ai", "name": "Notion AI", "category": "Productivity", "description": "AI-powered writing and workspace assistant", "url": "https://www.notion.so", "affiliateUrl": "https://www.notion.so/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-20", "logo": "/logos/notion.png" },
 
-  { "id": 15, "slug": "grammarly", "name": "Grammarly", "category": "Writing", "description": "AI writing assistant for grammar and clarity", "url": "https://www.grammarly.com", "affiliateUrl": "https://www.grammarly.com/affiliates?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/chatgpt.png" },
+  { "id": 15, "slug": "grammarly", "name": "Grammarly", "category": "Writing", "description": "AI writing assistant for grammar and clarity", "url": "https://www.grammarly.com", "affiliateUrl": "https://www.grammarly.com/affiliates?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/grammarly.png" },
 
-  { "id": 16, "slug": "jasper", "name": "Jasper", "category": "Writing", "description": "AI content generation for marketing teams", "url": "https://www.jasper.ai", "affiliateUrl": "https://www.jasper.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/chatgpt.png" },
+  { "id": 16, "slug": "jasper", "name": "Jasper", "category": "Writing", "description": "AI content generation for marketing teams", "url": "https://www.jasper.ai", "affiliateUrl": "https://www.jasper.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/jasper.png" },
 
-  { "id": 17, "slug": "copy-ai", "name": "Copy.ai", "category": "Writing", "description": "AI copywriting tool for marketing content", "url": "https://www.copy.ai", "affiliateUrl": "https://www.copy.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/chatgpt.png" },
+  { "id": 17, "slug": "copy-ai", "name": "Copy.ai", "category": "Writing", "description": "AI copywriting tool for marketing content", "url": "https://www.copy.ai", "affiliateUrl": "https://www.copy.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/copy-ai.png" },
 
-  { "id": 18, "slug": "writesonic", "name": "Writesonic", "category": "Writing", "description": "AI writing tool for blogs and ads", "url": "https://writesonic.com", "affiliateUrl": "https://writesonic.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/chatgpt.png" },
+  { "id": 18, "slug": "writesonic", "name": "Writesonic", "category": "Writing", "description": "AI writing tool for blogs and ads", "url": "https://writesonic.com", "affiliateUrl": "https://writesonic.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/writesonic.png" },
 
-  { "id": 19, "slug": "canva-ai", "name": "Canva AI", "category": "Design", "description": "AI-powered graphic design tools", "url": "https://www.canva.com", "affiliateUrl": "https://www.canva.com/affiliates?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/chatgpt.png" },
+  { "id": 19, "slug": "canva-ai", "name": "Canva AI", "category": "Design", "description": "AI-powered graphic design tools", "url": "https://www.canva.com", "affiliateUrl": "https://www.canva.com/affiliates?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/canva-ai.png" },
 
-  { "id": 20, "slug": "remove-bg", "name": "Remove.bg", "category": "Design", "description": "Remove image backgrounds automatically", "url": "https://www.remove.bg", "affiliateUrl": "https://www.remove.bg/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/chatgpt.png" },
+  { "id": 20, "slug": "remove-bg", "name": "Remove.bg", "category": "Design", "description": "Remove image backgrounds automatically", "url": "https://www.remove.bg", "affiliateUrl": "https://www.remove.bg/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18", "logo": "/logos/remove-bg.png" },
 
-  { "id": 21, "slug": "adobe-firefly", "name": "Adobe Firefly", "category": "Design", "description": "Generative AI for creative design", "url": "https://www.adobe.com/firefly", "affiliateUrl": "https://www.adobe.com/affiliates?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-22", "logo": "/logos/chatgpt.png" },
+  { "id": 21, "slug": "adobe-firefly", "name": "Adobe Firefly", "category": "Design", "description": "Generative AI for creative design", "url": "https://www.adobe.com/firefly", "affiliateUrl": "https://www.adobe.com/affiliates?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-22", "logo": "/logos/adobe-firefly.png" },
 
-  { "id": 22, "slug": "runway", "name": "Runway", "category": "Video", "description": "AI video editing and generation platform", "url": "https://runwayml.com", "affiliateUrl": "https://runwayml.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/chatgpt.png" },
+  { "id": 22, "slug": "runway", "name": "Runway", "category": "Video", "description": "AI video editing and generation platform", "url": "https://runwayml.com", "affiliateUrl": "https://runwayml.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/runway.png" },
 
-  { "id": 23, "slug": "pictory", "name": "Pictory", "category": "Video", "description": "Create videos from text using AI", "url": "https://pictory.ai", "affiliateUrl": "https://pictory.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/chatgpt.png" },
+  { "id": 23, "slug": "pictory", "name": "Pictory", "category": "Video", "description": "Create videos from text using AI", "url": "https://pictory.ai", "affiliateUrl": "https://pictory.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/pictory.png" },
 
-  { "id": 24, "slug": "synthesia", "name": "Synthesia", "category": "Video", "description": "AI avatar video creation platform", "url": "https://www.synthesia.io", "affiliateUrl": "https://www.synthesia.io/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-19", "logo": "/logos/chatgpt.png" },
+  { "id": 24, "slug": "synthesia", "name": "Synthesia", "category": "Video", "description": "AI avatar video creation platform", "url": "https://www.synthesia.io", "affiliateUrl": "https://www.synthesia.io/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-19", "logo": "/logos/synthesia.png" },
 
-  { "id": 25, "slug": "descript", "name": "Descript", "category": "Video", "description": "AI-powered audio and video editing", "url": "https://www.descript.com", "affiliateUrl": "https://www.descript.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/chatgpt.png" },
+  { "id": 25, "slug": "descript", "name": "Descript", "category": "Video", "description": "AI-powered audio and video editing", "url": "https://www.descript.com", "affiliateUrl": "https://www.descript.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/descript.png" },
 
-  { "id": 26, "slug": "elevenlabs", "name": "ElevenLabs", "category": "Audio", "description": "AI voice generation and cloning", "url": "https://elevenlabs.io", "affiliateUrl": "https://elevenlabs.io/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-20", "logo": "/logos/chatgpt.png" },
+  { "id": 26, "slug": "elevenlabs", "name": "ElevenLabs", "category": "Audio", "description": "AI voice generation and cloning", "url": "https://elevenlabs.io", "affiliateUrl": "https://elevenlabs.io/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-20", "logo": "/logos/elevenlabs.png" },
 
-  { "id": 27, "slug": "murf-ai", "name": "Murf AI", "category": "Audio", "description": "AI voiceover generator", "url": "https://murf.ai", "affiliateUrl": "https://murf.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18" },
+  { "id": 27, "slug": "murf-ai", "name": "Murf AI", "category": "Audio", "description": "AI voiceover generator", "url": "https://murf.ai", "affiliateUrl": "https://murf.ai/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-18" ,"logo": "/logos/murf-ai.png" },
 
-  { "id": 28, "slug": "tome", "name": "Tome", "category": "Presentations", "description": "AI-powered storytelling and presentations", "url": "https://tome.app", "affiliateUrl": "https://tome.app/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/chatgpt.png" },
+  { "id": 28, "slug": "tome", "name": "Tome", "category": "Presentations", "description": "AI-powered storytelling and presentations", "url": "https://tome.app", "affiliateUrl": "https://tome.app/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-17", "logo": "/logos/tome.png" },
 
-  { "id": 29, "slug": "gamma", "name": "Gamma", "category": "Presentations", "description": "AI presentation and document creator", "url": "https://gamma.app", "affiliateUrl": "https://gamma.app/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/chatgpt.png" },
+  { "id": 29, "slug": "gamma", "name": "Gamma", "category": "Presentations", "description": "AI presentation and document creator", "url": "https://gamma.app", "affiliateUrl": "https://gamma.app/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-16", "logo": "/logos/gamma.png" },
 
-  { "id": 30, "slug": "zapier-ai", "name": "Zapier AI", "category": "Automation", "description": "Automate workflows using AI", "url": "https://zapier.com", "affiliateUrl": "https://zapier.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/chatgpt.png" },
+  { "id": 30, "slug": "zapier-ai", "name": "Zapier AI", "category": "Automation", "description": "Automate workflows using AI", "url": "https://zapier.com", "affiliateUrl": "https://zapier.com/?via=aitoolsfordev", "featured": false, "addedAt": "2025-12-15", "logo": "/logos/zapier-ai.png" },
 
-  { "id": 31, "slug": "make", "name": "Make", "category": "Automation", "description": "Visual automation platform with AI", "url": "https://www.make.com", "affiliateUrl": "https://www.make.com/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/chatgpt.png" }
+  { "id": 31, "slug": "make", "name": "Make", "category": "Automation", "description": "Visual automation platform with AI", "url": "https://www.make.com", "affiliateUrl": "https://www.make.com/?via=aitoolsfordev", "featured": true, "addedAt": "2025-12-21", "logo": "/logos/make.png" }
 ,
  {
     "id": 32,
@@ -71,7 +71,7 @@
     "affiliateUrl": "https://surferseo.com/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-18",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/surfer-seo.png"
   },
   {
     "id": 33,
@@ -83,7 +83,7 @@
     "affiliateUrl": "https://ahrefs.com/affiliates?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-17",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/ahrefs.png"
   },
   {
     "id": 34,
@@ -95,7 +95,7 @@
     "affiliateUrl": "https://www.hubspot.com/partners?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-16",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/hubspot.png"
   },
   {
     "id": 35,
@@ -107,7 +107,7 @@
     "affiliateUrl": "https://www.adcreative.ai/?via=aitoolsfordev",
     "featured": true,
     "addedAt": "2025-12-19",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/adcreative.png"
   },
   {
     "id": 36,
@@ -119,7 +119,7 @@
     "affiliateUrl": "https://durable.co/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-18",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/durable.png"
   },
   {
     "id": 37,
@@ -131,7 +131,7 @@
     "affiliateUrl": "https://www.framer.com/affiliates?via=aitoolsfordev",
     "featured": true,
     "addedAt": "2025-12-20",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/framer-ai.png"
   },
   {
     "id": 38,
@@ -143,7 +143,7 @@
     "affiliateUrl": "https://www.kickresume.com/affiliate?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-17",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/kickresume.png"
   },
   {
     "id": 39,
@@ -155,7 +155,7 @@
     "affiliateUrl": "https://resume.io/affiliate?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-16",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/resume-io.png"
   },
   {
     "id": 40,
@@ -167,7 +167,7 @@
     "affiliateUrl": "https://otter.ai/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-15",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/otter-ai.png"
   },
   {
     "id": 41,
@@ -179,7 +179,7 @@
     "affiliateUrl": "https://fireflies.ai/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-16",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/fireflies.png"
   },
   {
     "id": 42,
@@ -191,7 +191,7 @@
     "affiliateUrl": "https://www.figma.com/affiliates?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-18",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/figma.png"
   },
   {
     "id": 43,
@@ -203,7 +203,7 @@
     "affiliateUrl": "https://looka.com/affiliates?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-17",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/looka.png"
   },
   {
     "id": 44,
@@ -215,7 +215,7 @@
     "affiliateUrl": "https://www.chatpdf.com/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-16",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/chatpdf.png"
   },
   {
     "id": 45,
@@ -227,7 +227,7 @@
     "affiliateUrl": "https://www.humata.ai/?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-15",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/humata.png"
   },
   {
     "id": 46,
@@ -239,7 +239,7 @@
     "affiliateUrl": "https://www.deepl.com/pro?via=aitoolsfordev",
     "featured": true,
     "addedAt": "2025-12-20",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/DeepL.png"
   },
   {
     "id": 47,
@@ -251,7 +251,7 @@
     "affiliateUrl": "https://quillbot.com/affiliates?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-18",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/quillbot.png"
   },
   {
     "id": 48,
@@ -263,7 +263,7 @@
     "affiliateUrl": "https://krisp.ai/partners?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-16",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/krisp.png"
   },
   {
     "id": 49,
@@ -275,7 +275,7 @@
     "affiliateUrl": "https://www.beautiful.ai/affiliates?via=aitoolsfordev",
     "featured": false,
     "addedAt": "2025-12-15",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/beautiful.png"
   },
   {
     "id": 50,
@@ -287,7 +287,7 @@
     "affiliateUrl": "https://uizard.io/?via=aitoolsfordev",
     "featured": true,
     "addedAt": "2025-12-19",
-    "logo": "/logos/chatgpt.png"
+    "logo": "/logos/uizard.png"
   }
 
 
