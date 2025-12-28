@@ -103,6 +103,25 @@ export default function SubmitTool() {
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-6">
           ⏱️ Submissions are reviewed manually. No spam. Quality tools only.
         </p>
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-8">
+          Affiliate Disclosure: Some links on this website are affiliate links.
+          If you click and make a purchase, we may earn a commission at no extra cost to you.
+        </p>
+
+        <div className="mt-12 p-6 rounded-xl bg-indigo-50 dark:bg-slate-800 border border-indigo-100 dark:border-slate-700">
+  <h3 className="text-lg font-semibold mb-2 dark:text-white">
+    Want to feature your AI tool?
+  </h3>
+
+  <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+    Featured tools appear on the homepage and category pages.
+  </p>
+
+  <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+    Contact: jagdishpatil81539@gmail.com
+  </p>
+</div>
+
 
       </div>
     </div>

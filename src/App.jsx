@@ -4,6 +4,7 @@ import GoRedirect from "./pages/GoRedirect";
 import { lazy, Suspense } from "react";
  import SubmitTool from "./pages/SubmitTool";
 import CategoryPage from "./pages/CategoryPage";
+import Footer from "./components/Footer";
 
 const ToolDetail = lazy(() => import("./pages/ToolDetail"));
 
@@ -21,6 +22,7 @@ function App() {
     <Route path="/category/:category" element={<CategoryPage />} />
 
   </Routes>
+    <Footer />
 </Suspense>
 
   );
