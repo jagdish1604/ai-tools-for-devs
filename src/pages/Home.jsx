@@ -7,6 +7,7 @@ import ToolGrid from "../components/ToolGrid";
 import DarkModeToggle from "../components/DarkModeToggle";
 import SortDropdown from "../components/SortDropdown";
 import ToolModal from "../components/ToolModal";
+import EmailSignup from "../components/EmailSignup";
 
 export default function Home() {
   /* 🔄 16.2.2 — Auto Last Updated */
@@ -199,6 +200,7 @@ export default function Home() {
           />
         </section>
       )}
+<EmailSignup />
 
       {/* Modal */}
       <ToolModal
