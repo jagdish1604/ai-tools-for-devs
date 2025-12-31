@@ -19,7 +19,7 @@ export default function ToolDetail() {
     .filter(t => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 4);
 
-  /* ✅ SEO (15.1) — REACT 19 SAFE */
+  /* ✅ SEO (15.1) — TITLE + META */
   useEffect(() => {
     const prevTitle = document.title;
     const prevDescription = document
@@ -57,29 +57,28 @@ export default function ToolDetail() {
     };
   }, [tool]);
 
-  /* ✅ SEO (15.3D) — STRUCTURED DATA (JSON-LD) */
-useEffect(() => {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": tool.name,
-    "applicationCategory": tool.category,
-    "operatingSystem": "Web",
-    "description": tool.description,
-    "url": tool.url
-  };
+  /* ✅ SEO (15.3D) — STRUCTURED DATA */
+  useEffect(() => {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: tool.name,
+      applicationCategory: tool.category,
+      operatingSystem: "Web",
+      description: tool.description,
+      url: tool.url
+    };
 
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.text = JSON.stringify(schema);
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(schema);
 
-  document.head.appendChild(script);
+    document.head.appendChild(script);
 
-  return () => {
-    document.head.removeChild(script);
-  };
-}, [tool]);
-
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [tool]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-4 py-12">
@@ -94,23 +93,22 @@ useEffect(() => {
         </Link>
       </div>
 
-      {/* 🦸 Hero Section */}
+      {/* 🦸 Hero */}
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-8 mb-8">
         <div className="flex flex-col md:flex-row items-start gap-6">
 
-          {/* 🖼️ Tool Logo */}
+          {/* Logo */}
           <div className="w-20 h-20 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden">
             {tool.logo ? (
               <img
-  src={tool.logo}
-  alt={`${tool.name} logo`}
-  width="80"
-  height="80"
-  loading="lazy"
-  decoding="async"
-  className="w-full h-full object-contain"
-/>
-
+                src={tool.logo}
+                alt={`${tool.name} logo`}
+                width="80"
+                height="80"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-contain"
+              />
             ) : (
               <span className="text-3xl font-bold text-slate-400">
                 {tool.name.charAt(0)}
@@ -118,7 +116,7 @@ useEffect(() => {
             )}
           </div>
 
-          {/* 🧠 Title + Description */}
+          {/* Title */}
           <div className="flex-1">
             <h1 className="text-4xl font-extrabold mb-3 dark:text-white">
               {tool.name}
@@ -136,8 +134,9 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* 📦 Content Card */}
+      {/* 📦 Content */}
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow p-8">
+
         <h2 className="text-xl font-bold mb-4 dark:text-white">
           About {tool.name}
         </h2>
@@ -146,19 +145,52 @@ useEffect(() => {
           {tool.longDescription || tool.description}
         </p>
 
-        {/* 🚀 CTA */}
+        {/* ✅ NEW: USE CASES */}
+        <h3 className="text-lg font-semibold mb-2 dark:text-white">
+          Best Use Cases
+        </h3>
+
+        <ul className="list-disc list-inside text-slate-600 dark:text-slate-400 mb-6">
+          <li>Developers building faster with AI</li>
+          <li>Startups improving productivity</li>
+          <li>Creators automating workflows</li>
+        </ul>
+
+        {/* ✅ NEW: FAQ */}
+        <h3 className="text-lg font-semibold mb-2 dark:text-white">
+          Frequently Asked Questions
+        </h3>
+
+        <p className="text-slate-600 dark:text-slate-400 mb-2">
+          <strong>Is {tool.name} free?</strong><br />
+          Most AI tools offer free trials or limited free plans.
+        </p>
+
+        <p className="text-slate-600 dark:text-slate-400 mb-6">
+          <strong>What are the best alternatives to {tool.name}?</strong><br />
+          Explore similar tools in the same category below.
+        </p>
+
+        {/* ✅ NEW: INTERNAL LINK */}
+        <Link
+          to={`/category/${encodeURIComponent(tool.category)}`}
+          className="text-indigo-600 dark:text-indigo-400 underline"
+        >
+          Explore more {tool.category} AI tools →
+        </Link>
+
+        {/* CTA */}
         <div className="flex flex-wrap gap-4 mt-6">
           <a
-  href={`/#/go/${tool.slug}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center justify-center
-             bg-indigo-600 hover:bg-indigo-700
-             text-white px-6 py-3 rounded-lg font-semibold"
->
-  🚀 Visit Official Website
-</a>
-
+            href={`/#/go/${tool.slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center
+                       bg-indigo-600 hover:bg-indigo-700
+                       text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            🚀 Visit Official Website
+          </a>
 
           <span className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400">
             ⭐ Trusted by developers worldwide
@@ -166,37 +198,26 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* 🔁 Related Tools (SEO-Optimized) */}
-{relatedTools.length > 0 && (
-  <section
-    className="max-w-5xl mx-auto mt-12"
-    aria-labelledby="related-tools-heading"
-  >
-    <h2
-      id="related-tools-heading"
-      className="text-2xl font-bold mb-6 dark:text-white"
-    >
-      <p className="sr-only">
-  Discover similar AI tools in the {tool.category} category.
-</p>
+      {/* 🔁 Related Tools */}
+      {relatedTools.length > 0 && (
+        <section className="max-w-5xl mx-auto mt-12">
+          <h2 className="text-2xl font-bold mb-6 dark:text-white">
+            🔗 Related AI Tools in {tool.category}
+          </h2>
 
-      🔗 Related AI Tools in {tool.category}
-    </h2>
-
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {relatedTools.map(rt => (
-        <a
-          key={rt.id}
-          href={`/#/tools/${rt.slug}`}
-          className="block focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-xl"
-          title={`${rt.name} – ${rt.category} AI Tool`}
-        >
-          <ToolCard tool={rt} />
-        </a>
-      ))}
-    </div>
-  </section>
-)}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedTools.map(rt => (
+              <a
+                key={rt.id}
+                href={`/#/tools/${rt.slug}`}
+                className="block rounded-xl"
+              >
+                <ToolCard tool={rt} />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
 
     </div>
   );

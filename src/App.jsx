@@ -5,6 +5,7 @@ import { lazy, Suspense } from "react";
  import SubmitTool from "./pages/SubmitTool";
 import CategoryPage from "./pages/CategoryPage";
 import Footer from "./components/Footer";
+import Advertise from "./pages/Advertise";
 
 const ToolDetail = lazy(() => import("./pages/ToolDetail"));
 
@@ -20,7 +21,7 @@ function App() {
     <Route path="/go/:slug" element={<GoRedirect />} />
     <Route path="/submit" element={<SubmitTool />} />
     <Route path="/category/:category" element={<CategoryPage />} />
-
+    <Route path="/advertise" element={<Advertise />} />
   </Routes>
     <Footer />
 </Suspense>

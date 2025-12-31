@@ -154,6 +154,9 @@ export default function Home() {
         Discover the best AI tools for developers, startups, and creators.
         Browse AI chat tools, image generation tools, developer productivity tools,
         and new AI software added weekly.
+
+         Browse AI tools by category like AI Chat, Image Generation,
+  Developer Tools, Writing, SEO, Automation, and more.
       </p>
 
       {/* 🆕 NEW THIS WEEK */}
