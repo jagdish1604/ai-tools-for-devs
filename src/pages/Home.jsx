@@ -7,14 +7,17 @@ import ToolGrid from "../components/ToolGrid";
 import DarkModeToggle from "../components/DarkModeToggle";
 import SortDropdown from "../components/SortDropdown";
 import ToolModal from "../components/ToolModal";
-import EmailSignup from "../components/EmailSignup";
+import FeaturedCarousel from "../components/FeaturedCarousel";
+import { lazy, Suspense } from "react";
+
 
 export default function Home() {
-  /* 🔄 16.2.2 — Auto Last Updated */
+  /* 🔄 Auto Last Updated */
   const lastUpdated = new Date(
     Math.max(...toolsData.map(t => new Date(t.addedAt)))
   ).toLocaleDateString();
 
+const EmailSignup = lazy(() => import("../components/EmailSignup"));
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [sort, setSort] = useState("newest");
@@ -24,7 +27,7 @@ export default function Home() {
     return JSON.parse(localStorage.getItem("favorites")) || [];
   });
 
-  /* 🆕 16.2.3 — Weekly logic */
+  /* Weekly logic */
   const isThisWeek = (date) => {
     const now = new Date();
     const d = new Date(date);
@@ -91,29 +94,127 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 bg-slate-50 dark:bg-slate-900 min-h-screen">
 
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-4xl font-extrabold mb-2 dark:text-white">
-            Discover the Best AI Tools
-          </h1>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl">
-            A curated list of powerful AI tools for developers, creators, and startups.
-          </p>
-        </div>
+      {/* 🌈 HERO */}
+      <div className="relative mb-12 rounded-2xl overflow-hidden
+                      bg-gradient-to-br from-indigo-600 via-indigo-500 to-purple-600
+                      dark:from-indigo-700 dark:via-indigo-600 dark:to-purple-700">
+        <div className="px-8 py-14 flex flex-col md:flex-row
+                        items-start md:items-center justify-between gap-6">
 
-        <div className="flex items-center gap-3">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">
+              Discover the Best AI Tools
+            </h1>
+
+            <p className="text-indigo-100 max-w-2xl text-lg">
+              240+ curated AI tools for developers, creators, and startups.
+              Updated weekly. No fluff.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="#tools"
+                className="bg-white text-indigo-700
+                           px-6 py-3 rounded-lg font-semibold
+                           hover:bg-indigo-50 transition"
+              >
+                🔍 Explore Tools
+              </a>
+
+              <a
+                href="/#/submit"
+                className="border border-white/30 text-white
+                           px-6 py-3 rounded-lg font-semibold
+                           hover:bg-white/10 transition"
+              >
+                ➕ Submit a Tool
+              </a>
+            </div>
+          </div>
+
           <DarkModeToggle />
-          <a
-            href="/#/submit"
-            className="inline-flex items-center px-4 py-2
-                       bg-indigo-600 hover:bg-indigo-700
-                       text-white rounded-lg text-sm font-semibold"
-          >
-            ➕ Submit a Tool
-          </a>
         </div>
       </div>
+
+{/* 🔥 HERO HIGHLIGHT */}
+<div className="mb-10 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600
+                text-white p-8 flex flex-col md:flex-row
+                items-center justify-between gap-6">
+  <div>
+    <h2 className="text-3xl font-extrabold mb-2">
+      Explore 240+ AI Tools 🚀
+    </h2>
+    <p className="text-indigo-100 max-w-xl">
+      Discover hand-picked AI tools for developers, creators, startups, and teams.
+      Updated weekly.
+    </p>
+  </div>
+
+  <div className="flex gap-6 text-center">
+    <div>
+      <p className="text-3xl font-bold">{toolsData.length}+</p>
+      <p className="text-sm text-indigo-200">Tools</p>
+    </div>
+    <div>
+      <p className="text-3xl font-bold">{categories.length - 1}</p>
+      <p className="text-sm text-indigo-200">Categories</p>
+    </div>
+  </div>
+</div>
+
+      <div id="tools"></div>
+
+      {/* ✅ TRUST STRIP */}
+<div className="mb-12">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4
+                  bg-white dark:bg-slate-800
+                  border border-slate-200 dark:border-slate-700
+                  rounded-2xl p-6 text-center">
+
+    <div>
+      <p className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+        240+
+      </p>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        AI Tools Listed
+      </p>
+    </div>
+
+    <div>
+      <p className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+        Weekly
+      </p>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        Updates
+      </p>
+    </div>
+
+    <div>
+      <p className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+        Developer-First
+      </p>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        Curated Tools
+      </p>
+    </div>
+
+    <div>
+      <p className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+        No Spam
+      </p>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        No Ads (Yet)
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<p className="sr-only">
+  AI Tools Hub is trusted by developers, startups, and creators worldwide.
+  Explore curated AI software, productivity tools, and developer resources.
+</p>
+
 
       {/* 🔄 Last Updated */}
       <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">
@@ -130,39 +231,36 @@ export default function Home() {
         />
         <SortDropdown value={sort} onChange={setSort} />
       </div>
-      {/* 🔗 Category SEO Links */}
-<div className="flex flex-wrap gap-2 mb-10">
-  {categories
-    .filter(c => c !== "All")
-    .map(category => (
-      <Link
-        key={category}
-        to={`/category/${encodeURIComponent(category)}`}
-        className="text-xs px-3 py-1 rounded-full
-                   bg-slate-100 dark:bg-slate-700
-                   text-slate-700 dark:text-slate-300
-                   hover:bg-indigo-100 dark:hover:bg-slate-600"
-      >
-        {category}
-      </Link>
-    ))}
-</div>
 
+      {/* Category Links */}
+      <div className="flex flex-wrap gap-2 mb-10">
+        {categories
+          .filter(c => c !== "All")
+          .map(category => (
+            <Link
+              key={category}
+              to={`/category/${encodeURIComponent(category)}`}
+              className="text-xs px-3 py-1 rounded-full
+                         bg-slate-100 dark:bg-slate-700
+                         text-slate-700 dark:text-slate-300
+                         hover:bg-indigo-100 dark:hover:bg-slate-600"
+            >
+              {category}
+            </Link>
+          ))}
+      </div>
 
       {/* SEO hidden text */}
       <p className="sr-only">
         Discover the best AI tools for developers, startups, and creators.
         Browse AI chat tools, image generation tools, developer productivity tools,
         and new AI software added weekly.
-
-         Browse AI tools by category like AI Chat, Image Generation,
-  Developer Tools, Writing, SEO, Automation, and more.
       </p>
 
       {/* 🆕 NEW THIS WEEK */}
       {weeklyTools.length > 0 && (
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 dark:text-white">
             🆕 New This Week
           </h2>
           <ToolGrid
@@ -173,26 +271,34 @@ export default function Home() {
           />
         </section>
       )}
+<hr className="my-12 border-slate-200 dark:border-slate-700" />
 
-      {/* 🌟 Featured */}
-      {featuredTools.length > 0 && (
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">
-            🌟 Featured Tools
-          </h2>
-          <ToolGrid
-            tools={featuredTools}
-            onToolClick={setSelectedTool}
-            favorites={favorites}
-            onToggleFavorite={toggleFavorite}
-          />
-        </section>
-      )}
+      {/* 🌟 FEATURED (Horizontal Scroll) */}
+{featuredTools.length > 0 && (
+  <section className="mb-16">
+    <h2 className="text-2xl font-bold mb-4 dark:text-white">
+      🌟 Featured AI Tools (Editor’s Pick)
+    </h2>
 
-      {/* 🆕 Recently Added */}
+    <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-2xl">
+      Hand-picked AI tools trusted by developers and startups.
+    </p>
+
+    <FeaturedCarousel
+      tools={featuredTools}
+      onToolClick={setSelectedTool}
+      favorites={favorites}
+      onToggleFavorite={toggleFavorite}
+    />
+  </section>
+)}
+
+
+
+      {/* 🆕 RECENT */}
       {recentTools.length > 0 && (
-        <section>
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold mb-6 dark:text-white">
             🆕 Recently Added
           </h2>
           <ToolGrid
@@ -203,7 +309,36 @@ export default function Home() {
           />
         </section>
       )}
-<EmailSignup />
+
+{/* ✅ TRUST STRIP */}
+<div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+  <div className="p-4 rounded-xl bg-white dark:bg-slate-800 shadow">
+    ⚡ Curated tools only
+  </div>
+  <div className="p-4 rounded-xl bg-white dark:bg-slate-800 shadow">
+    🔍 No spam. No clutter.
+  </div>
+  <div className="p-4 rounded-xl bg-white dark:bg-slate-800 shadow">
+    📈 Updated every week
+  </div>
+</div>
+
+
+      <div className="mt-16">
+        <Suspense fallback={null}>
+  <EmailSignup />
+</Suspense>
+<button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="fixed bottom-6 right-6 z-50
+             bg-indigo-600 hover:bg-indigo-700
+             text-white px-4 py-2 rounded-full shadow-lg"
+>
+  ↑ Top
+</button>
+
+
+      </div>
 
       {/* Modal */}
       <ToolModal

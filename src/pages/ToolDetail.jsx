@@ -133,6 +133,7 @@ export default function ToolDetail() {
           </div>
         </div>
       </div>
+      
 
       {/* 📦 Content */}
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow p-8">
@@ -141,7 +142,8 @@ export default function ToolDetail() {
           About {tool.name}
         </h2>
 
-        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-lg">
+
           {tool.longDescription || tool.description}
         </p>
 
@@ -179,24 +181,57 @@ export default function ToolDetail() {
           Explore more {tool.category} AI tools →
         </Link>
 
+        
+        {/* 🔍 Quick Info */}
+<div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+    <p className="text-xs text-slate-500">Category</p>
+    <p className="font-semibold dark:text-white">{tool.category}</p>
+  </div>
+
+  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+    <p className="text-xs text-slate-500">Platform</p>
+    <p className="font-semibold dark:text-white">Web</p>
+  </div>
+
+  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+    <p className="text-xs text-slate-500">Pricing</p>
+    <p className="font-semibold dark:text-white">
+      {tool.canAffiliate ? "Free / Paid" : "Free"}
+    </p>
+  </div>
+</div>
+
+
         {/* CTA */}
         <div className="flex flex-wrap gap-4 mt-6">
           <a
-            href={`/#/go/${tool.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center
-                       bg-indigo-600 hover:bg-indigo-700
-                       text-white px-6 py-3 rounded-lg font-semibold"
-          >
-            🚀 Visit Official Website
-          </a>
+  href={`/#/go/${tool.slug}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2
+             bg-gradient-to-r from-indigo-600 to-purple-600
+             hover:from-indigo-700 hover:to-purple-700
+             text-white px-8 py-4 rounded-xl
+             font-semibold text-lg shadow-lg
+             transition-transform hover:-translate-y-0.5"
+>
+  🚀 Visit {tool.name}
+</a>
+
 
           <span className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400">
             ⭐ Trusted by developers worldwide
           </span>
         </div>
+        <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
+  ✔ Used by developers & creators worldwide  
+  ✔ Curated by AI Tools Hub  
+  ✔ Updated regularly
+</div>
+
       </div>
+      
 
       {/* 🔁 Related Tools */}
       {relatedTools.length > 0 && (
