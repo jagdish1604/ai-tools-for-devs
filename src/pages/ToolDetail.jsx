@@ -119,12 +119,19 @@ export default function ToolDetail() {
           {/* Title */}
           <div className="flex-1">
             <h1 className="text-4xl font-extrabold mb-3 dark:text-white">
-              {tool.name}
+              {tool.name} – AI Tool Review, Features & Alternatives
             </h1>
 
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               {tool.description}
+               <p className="mt-4 text-slate-600 dark:text-slate-400">
+  Looking for an honest review of {tool.name}?  
+  Here’s everything you need to know — features, use cases,
+  pricing insights, and the best alternatives.
+</p>
             </p>
+           
+
 
             <span className="inline-block text-sm bg-slate-100 dark:bg-slate-700
                              text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full">
@@ -223,7 +230,12 @@ export default function ToolDetail() {
           <span className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400">
             ⭐ Trusted by developers worldwide
           </span>
+          
         </div>
+        <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
+  Affiliate disclosure: Some outbound links may be affiliate links.
+</p>
+
         <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
   ✔ Used by developers & creators worldwide  
   ✔ Curated by AI Tools Hub  
