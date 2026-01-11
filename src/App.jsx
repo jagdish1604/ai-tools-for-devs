@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 import CategoryPage from "./pages/CategoryPage";
 import Footer from "./components/Footer";
 import Advertise from "./pages/Advertise";
+import { Analytics } from "@vercel/analytics/react";
 
 const ToolDetail = lazy(() => import("./pages/ToolDetail"));
 
@@ -24,6 +25,7 @@ function App() {
     <Route path="/advertise" element={<Advertise />} />
   </Routes>
     <Footer />
+    <Analytics />
 </Suspense>
 
   );
