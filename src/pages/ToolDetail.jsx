@@ -213,7 +213,7 @@ export default function ToolDetail() {
         {/* CTA */}
         <div className="flex flex-wrap gap-4 mt-6">
           <a
-  href={`/#/go/${tool.slug}`}
+  href={`/go/${tool.slug}`}
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2
