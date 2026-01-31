@@ -85,7 +85,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-14 flex justify-between items-start gap-6">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Discover the Best AI Tools
+              Best AI Tools for Developers (240+ Tools)
+
             </h1>
             <p className="text-indigo-100 max-w-2xl text-lg">
               240+ curated AI tools for developers, creators, and startups.
@@ -104,12 +105,12 @@ export default function Home() {
   🔍 Explore Tools
 </button>
 
-              <a
-                href="/#/submit"
-                className="border border-white/40 px-6 py-3 rounded-lg font-semibold"
-              >
-                ➕ Submit Tool
-              </a>
+              <Link
+  to="/submit"
+  className="border border-white/40 px-6 py-3 rounded-lg font-semibold"
+>
+  ➕ Submit Tool
+</Link>
             </div>
           </div>
 
@@ -134,10 +135,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* 🔄 LAST UPDATED */}
-        <p className="text-xs text-slate-500 dark:text-slate-400 mb-6">
-          🔄 Last updated on {lastUpdated}
-        </p>
+        
 
         {/* SEARCH */}
         <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -164,6 +162,61 @@ export default function Home() {
             </Link>
           ))}
         </div>
+          {/* 🔍 SEO ENTRY PAGES (SAFE UI PLACEMENT) */}
+<section className="mb-14">
+  <h2 className="text-2xl font-bold mb-6 dark:text-white">
+    Popular AI Tool Guides for Developers
+  </h2>
+
+  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <li>
+      <Link
+        to="/best-ai-tools-for-developers"
+        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+      >
+        Best AI Tools for Developers
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        to="/ai-tools-for-dotnet-developers"
+        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+      >
+        AI Tools for .NET Developers
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        to="/ai-tools-for-react-developers"
+        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+      >
+        AI Tools for React Developers
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        to="/free-ai-tools-for-coding"
+        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+      >
+        Free AI Tools for Coding
+      </Link>
+    </li>
+
+    <li>
+      <Link
+        to="/chatgpt-alternatives-for-developers"
+        className="text-indigo-600 dark:text-indigo-400 hover:underline"
+      >
+        ChatGPT Alternatives for Developers
+      </Link>
+    </li>
+  </ul>
+</section>
+
+
 
         {/* 🆕 NEW THIS WEEK */}
         {weeklyTools.length > 0 && (
