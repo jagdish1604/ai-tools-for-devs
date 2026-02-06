@@ -34,6 +34,26 @@ export default function ComparePage() {
           rel="canonical"
           href={`https://aitoolsfordev.com/compare/${slugs}`}
         />
+
+         {/* ✅ SCHEMA: ItemList (Comparison) */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": `${title} Comparison`,
+      "itemListElement": selectedTools.map((tool, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": tool.name,
+          "applicationCategory": tool.category,
+          "operatingSystem": "Web",
+          "url": `https://aitoolsfordev.com/tools/${tool.slug}`
+        }
+      }))
+    })}
+  </script>
       </Helmet>
 
       <div className="max-w-6xl mx-auto">

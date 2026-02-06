@@ -42,6 +42,25 @@ const alternatives = getAlternatives(tool, tools);
           rel="canonical"
           href={`https://aitoolsfordev.com/tools/${tool.slug}`}
         />
+
+        {/* ✅ SCHEMA: SoftwareApplication */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": tool.name,
+      "applicationCategory": tool.category,
+      "operatingSystem": "Web",
+      "url": `https://aitoolsfordev.com/tools/${tool.slug}`,
+      "description": tool.description,
+      "offers": {
+        "@type": "Offer",
+        "price": tool.canAffiliate ? "0" : "0",
+        "priceCurrency": "USD"
+      }
+    })}
+  </script>
+
       </Helmet>
 
       {/* 🔙 Back */}
