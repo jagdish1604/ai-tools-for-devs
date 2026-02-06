@@ -1,11 +1,16 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
 import tools from "../data/tools.json";
 import ToolCard from "../components/ToolCard";
 import { Helmet } from "react-helmet-async";
+import { getBestFor, getUseCases } from "../utils/toolMetadata";
+import { getAlternatives } from "../utils/toolMetadata";
+import AlternativesSection from "../components/AlternativesSection";
+
+
 export default function ToolDetail() {
   const { slug } = useParams();
   const tool = tools.find(t => t.slug === slug);
+
 
   if (!tool) {
     return (
@@ -18,80 +23,21 @@ export default function ToolDetail() {
   const relatedTools = tools
     .filter(t => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 4);
+const alternatives = getAlternatives(tool, tools);
 
-  /* ✅ SEO (15.1) — TITLE + META */
-  useEffect(() => {
-    const prevTitle = document.title;
-    const prevDescription = document
-      .querySelector('meta[name="description"]')
-      ?.getAttribute("content");
-
-    document.title = `${tool.name} – AI Tool Review & Best Alternatives`;
-
-    let metaDescription = document.querySelector(
-      'meta[name="description"]'
-    );
-
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.name = "description";
-      document.head.appendChild(metaDescription);
-    }
-
-    metaDescription.content = `${tool.name} is an AI tool for ${tool.category}. ${tool.description}`;
-
-    let canonical = document.querySelector("link[rel='canonical']");
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.rel = "canonical";
-      document.head.appendChild(canonical);
-    }
-
-    canonical.href = `https://aitoolsfordev.com/tools/${tool.slug}`;
-
-    return () => {
-      document.title = prevTitle;
-      if (prevDescription && metaDescription) {
-        metaDescription.content = prevDescription;
-      }
-    };
-  }, [tool]);
-
-  /* ✅ SEO (15.3D) — STRUCTURED DATA */
-  useEffect(() => {
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: tool.name,
-      applicationCategory: tool.category,
-      operatingSystem: "Web",
-      description: tool.description,
-      url: tool.url
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify(schema);
-
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, [tool]);
+  const bestFor = getBestFor(tool);
+  const useCases = getUseCases(tool);
 
   return (
-    
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-4 py-12">
 
+      {/* ✅ SEO (SINGLE SOURCE OF TRUTH) */}
       <Helmet>
-        <title>{tool.name} – AI Tool for Developers</title>
-
+        <title>{tool.name} – AI Tool Review & Best Alternatives</title>
         <meta
           name="description"
-          content={`${tool.name} is an AI tool that helps developers with ${tool.category.toLowerCase()}. Learn features, use cases, pricing, and alternatives.`}
+          content={`${tool.name} is an AI tool for ${tool.category}. Learn features, use cases, pricing, and best alternatives.`}
         />
-
         <link
           rel="canonical"
           href={`https://aitoolsfordev.com/tools/${tool.slug}`}
@@ -121,7 +67,6 @@ export default function ToolDetail() {
                 width="80"
                 height="80"
                 loading="lazy"
-                decoding="async"
                 className="w-full h-full object-contain"
               />
             ) : (
@@ -139,23 +84,21 @@ export default function ToolDetail() {
 
             <p className="text-slate-600 dark:text-slate-400 mb-4">
               {tool.description}
-               <p className="mt-4 text-slate-600 dark:text-slate-400">
-  Looking for an honest review of {tool.name}?  
-  Here’s everything you need to know — features, use cases,
-  pricing insights, and the best alternatives.
-</p>
             </p>
-           
 
+            <p className="text-slate-600 dark:text-slate-400">
+              Looking for an honest review of {tool.name}?  
+              Here’s everything you need to know — features, use cases,
+              pricing insights, and the best alternatives.
+            </p>
 
-            <span className="inline-block text-sm bg-slate-100 dark:bg-slate-700
+            <span className="inline-block mt-4 text-sm bg-slate-100 dark:bg-slate-700
                              text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full">
               {tool.category}
             </span>
           </div>
         </div>
       </div>
-      
 
       {/* 📦 Content */}
       <div className="max-w-5xl mx-auto bg-white dark:bg-slate-900 rounded-2xl shadow p-8">
@@ -165,37 +108,47 @@ export default function ToolDetail() {
         </h2>
 
         <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-lg">
-
           {tool.longDescription || tool.description}
         </p>
 
-        {/* ✅ NEW: USE CASES */}
-        <h3 className="text-lg font-semibold mb-2 dark:text-white">
-          Best Use Cases
-        </h3>
+        {/* 🎯 BEST FOR */}
+        {bestFor.length > 0 && (
+          <>
+            <h3 className="text-lg font-semibold mb-3 dark:text-white">
+              Best for
+            </h3>
 
-        <ul className="list-disc list-inside text-slate-600 dark:text-slate-400 mb-6">
-          <li>Developers building faster with AI</li>
-          <li>Startups improving productivity</li>
-          <li>Creators automating workflows</li>
-        </ul>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {bestFor.map((item, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-sm rounded-full
+                             bg-indigo-100 text-indigo-700
+                             dark:bg-indigo-900 dark:text-indigo-300"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
 
-        {/* ✅ NEW: FAQ */}
-        <h3 className="text-lg font-semibold mb-2 dark:text-white">
-          Frequently Asked Questions
-        </h3>
+        {/* 🧩 USE CASES */}
+        {useCases.length > 0 && (
+          <>
+            <h3 className="text-lg font-semibold mb-3 dark:text-white">
+              What can you do with {tool.name}?
+            </h3>
 
-        <p className="text-slate-600 dark:text-slate-400 mb-2">
-          <strong>Is {tool.name} free?</strong><br />
-          Most AI tools offer free trials or limited free plans.
-        </p>
+            <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400 mb-6">
+              {useCases.map((uc, i) => (
+                <li key={i}>{uc}</li>
+              ))}
+            </ul>
+          </>
+        )}
 
-        <p className="text-slate-600 dark:text-slate-400 mb-6">
-          <strong>What are the best alternatives to {tool.name}?</strong><br />
-          Explore similar tools in the same category below.
-        </p>
-
-        {/* ✅ NEW: INTERNAL LINK */}
+        {/* 🔗 Category link */}
         <Link
           to={`/category/${encodeURIComponent(tool.category)}`}
           className="text-indigo-600 dark:text-indigo-400 underline"
@@ -203,62 +156,46 @@ export default function ToolDetail() {
           Explore more {tool.category} AI tools →
         </Link>
 
-        
-        {/* 🔍 Quick Info */}
-<div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
-    <p className="text-xs text-slate-500">Category</p>
-    <p className="font-semibold dark:text-white">{tool.category}</p>
-  </div>
-
-  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
-    <p className="text-xs text-slate-500">Platform</p>
-    <p className="font-semibold dark:text-white">Web</p>
-  </div>
-
-  <div className="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
-    <p className="text-xs text-slate-500">Pricing</p>
-    <p className="font-semibold dark:text-white">
-      {tool.canAffiliate ? "Free / Paid" : "Free"}
-    </p>
-  </div>
-</div>
-
-
         {/* CTA */}
-        <div className="flex flex-wrap gap-4 mt-6">
+        <div className="flex flex-wrap gap-4 mt-8">
           <a
-  href={`/go/${tool.slug}`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2
-             bg-gradient-to-r from-indigo-600 to-purple-600
-             hover:from-indigo-700 hover:to-purple-700
-             text-white px-8 py-4 rounded-xl
-             font-semibold text-lg shadow-lg
-             transition-transform hover:-translate-y-0.5"
->
-  🚀 Visit {tool.name}
-</a>
-
-
-          <span className="inline-flex items-center text-sm text-slate-500 dark:text-slate-400">
-            ⭐ Trusted by developers worldwide
-          </span>
-          
+            href={`/go/${tool.slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2
+                       bg-gradient-to-r from-indigo-600 to-purple-600
+                       hover:from-indigo-700 hover:to-purple-700
+                       text-white px-8 py-4 rounded-xl
+                       font-semibold text-lg shadow-lg"
+          >
+            🚀 Visit {tool.name}
+          </a>
         </div>
+
         <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
-  Affiliate disclosure: Some outbound links may be affiliate links.
-</p>
-
-        <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
-  ✔ Used by developers & creators worldwide  
-  ✔ Curated by AI Tools Hub  
-  ✔ Updated regularly
-</div>
-
+          Affiliate disclosure: Some outbound links may be affiliate links.
+        </p>
       </div>
-      
+
+        <AlternativesSection
+  currentTool={tool}
+  alternatives={alternatives}
+/>
+{/* 🔀 Compare CTA */}
+{alternatives.length > 0 && (
+  <div className="max-w-5xl mx-auto mt-4">
+    <Link
+      to={`/compare/${tool.slug}-vs-${alternatives[0].slug}`}
+      className="text-indigo-600 dark:text-indigo-400 underline font-medium"
+    >
+      Compare {tool.name} with {alternatives[0].name} →
+    </Link>
+  </div>
+)}
+
+
+{/* 🔁 Related Tools (you already have this) */}
+
 
       {/* 🔁 Related Tools */}
       {relatedTools.length > 0 && (
@@ -269,18 +206,13 @@ export default function ToolDetail() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedTools.map(rt => (
-              <a
-                key={rt.id}
-                href={`/tools/${rt.slug}`}
-                className="block rounded-xl"
-              >
+              <Link key={rt.slug} to={`/tools/${rt.slug}`}>
                 <ToolCard tool={rt} />
-              </a>
+              </Link>
             ))}
           </div>
         </section>
       )}
-
     </div>
   );
 }

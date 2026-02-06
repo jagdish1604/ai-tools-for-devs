@@ -12,6 +12,7 @@ import AiToolsForDotNetDevelopers from "./pages/seo/AiToolsForDotNetDevelopers";
 import AiToolsForReactDevelopers from "./pages/seo/AiToolsForReactDevelopers";
 import FreeAiToolsForCoding from "./pages/seo/FreeAiToolsForCoding";
 import ChatGptAlternativesForDevelopers from "./pages/seo/ChatGptAlternativesForDevelopers";
+import ComparePage from "./pages/ComparePage";
 
 
 
@@ -44,12 +45,11 @@ function App() {
   path="/chatgpt-alternatives-for-developers"
   element={<ChatGptAlternativesForDevelopers />}
 />
-
-
 <Route
   path="/ai-tools-for-react-developers"
   element={<AiToolsForReactDevelopers />}
 />
+<Route path="/compare/:slugs" element={<ComparePage />} />
 
 
   </Routes>
