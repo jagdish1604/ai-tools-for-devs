@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import tools from "../data/tools.json";
 import ToolCard from "../components/ToolCard";
-
+import { Helmet } from "react-helmet-async";
 export default function ToolDetail() {
   const { slug } = useParams();
   const tool = tools.find(t => t.slug === slug);
@@ -81,7 +81,22 @@ export default function ToolDetail() {
   }, [tool]);
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-4 py-12">
+
+      <Helmet>
+        <title>{tool.name} – AI Tool for Developers</title>
+
+        <meta
+          name="description"
+          content={`${tool.name} is an AI tool that helps developers with ${tool.category.toLowerCase()}. Learn features, use cases, pricing, and alternatives.`}
+        />
+
+        <link
+          rel="canonical"
+          href={`https://aitoolsfordev.com/tools/${tool.slug}`}
+        />
+      </Helmet>
 
       {/* 🔙 Back */}
       <div className="max-w-5xl mx-auto mb-6">

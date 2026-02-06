@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Right links */}
         <div className="flex items-center gap-6 text-sm">
           <a
-            href="/#/advertise"
+            href="/advertise"
             className="hover:text-white transition underline-offset-4 hover:underline"
           >
             Advertise
