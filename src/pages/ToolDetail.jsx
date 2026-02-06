@@ -271,7 +271,7 @@ export default function ToolDetail() {
             {relatedTools.map(rt => (
               <a
                 key={rt.id}
-                href={`/#/tools/${rt.slug}`}
+                href={`/tools/${rt.slug}`}
                 className="block rounded-xl"
               >
                 <ToolCard tool={rt} />
