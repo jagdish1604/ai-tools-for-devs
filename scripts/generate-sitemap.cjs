@@ -7,7 +7,7 @@ const DOMAIN = "https://aitoolsfordev.com";
 
 const devToolPages = [
   "/dev-tools/regex-tester",
-  "dev-tools/json-formatter"
+  "/dev-tools/json-formatter"
 ];
 
 
