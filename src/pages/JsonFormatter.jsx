@@ -223,7 +223,82 @@ export default function JsonFormatter() {
           </div>
 
         </div>
+        
       </main>
+      {/* 📘 EDUCATIONAL & FAQ SECTION (SEO BOOST) */}
+      <section className="max-w-7xl mx-auto px-4 md:px-8 pb-20 mt-12">
+        <div className="grid md:grid-cols-2 gap-12 border-t border-slate-200 dark:border-slate-800 pt-12">
+          
+          {/* Left Column: Why & How */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+              Professional JSON Management
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+              JSON (JavaScript Object Notation) is the backbone of modern web communication. 
+              However, raw API responses are often minified and impossible to debug. 
+              <strong> JSON Master</strong> provides a high-performance environment to 
+              validate, format, and visualize your data structures instantly.
+            </p>
+            
+            <div className="space-y-4">
+              <div className="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 shrink-0"><FiZap /></div>
+                <div>
+                  <h3 className="font-bold text-sm">Instant Validation</h3>
+                  <p className="text-xs text-slate-500">Real-time syntax checking with descriptive error messages for broken JSON.</p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-4 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800">
+                <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 shrink-0"><FiDatabase /></div>
+                <div>
+                  <h3 className="font-bold text-sm">Tree Visualization</h3>
+                  <p className="text-xs text-slate-500">Navigate complex nested objects and arrays with a collapsible interactive tree view.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: FAQs */}
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <FiCheck className="text-indigo-600" /> Frequently Asked Questions
+            </h2>
+            
+            <div className="space-y-4">
+              {[
+                {
+                  q: "Is my data safe with JSON Master?",
+                  a: "Yes. Our tool is client-side only. Your JSON data never leaves your browser and is not sent to any server, ensuring 100% privacy."
+                },
+                {
+                  q: "Can I convert JSON to TypeScript?",
+                  a: "Absolutely! Simply paste your JSON and switch to the 'Types' tab to get automatically generated TypeScript interfaces."
+                },
+                {
+                  q: "Why is my JSON showing as 'Invalid'?",
+                  a: "The most common reasons are missing quotes around keys, trailing commas, or unclosed brackets. Our editor will highlight the exact syntax error for you."
+                },
+                {
+                  q: "Does this tool support JSON Schema?",
+                  a: "Yes, it automatically generates a draft-07 JSON Schema based on the structure of your input data."
+                }
+              ].map((faq, i) => (
+                <details key={i} className="group bg-slate-100 dark:bg-slate-900/50 rounded-2xl p-4 cursor-pointer transition-all border border-transparent hover:border-indigo-500/30">
+                  <summary className="font-bold text-sm flex justify-between items-center list-none">
+                    {faq.q}
+                    <FiChevronDown className="group-open:rotate-180 transition-transform text-slate-400" />
+                  </summary>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
+                    {faq.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }

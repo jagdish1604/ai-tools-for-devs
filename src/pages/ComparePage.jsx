@@ -25,36 +25,58 @@ export default function ComparePage() {
 
       {/* ✅ SEO */}
       <Helmet>
-        <title>{title} – AI Tool Comparison</title>
-        <meta
-          name="description"
-          content={`Compare ${title}. Features, use cases, pricing, and recommendations for developers and creators.`}
-        />
-        <link
-          rel="canonical"
-          href={`https://aitoolsfordev.com/compare/${slugs}`}
-        />
+  {/* 1. VS Optimized Title: Jab log search karein "Tool A vs Tool B" */}
+  <title>{selectedTools.map(t => t.name).join(' vs ')} | Which is Better? Comparison 2026</title>
+  
+  {/* 2. Benefit-Driven Description: Pricing aur Features ka zikr karein */}
+  <meta
+    name="description"
+    content={`Detailed comparison: ${title}. Side-by-side analysis of features, pricing, and performance to help you choose the best AI tool for your development workflow.`}
+  />
+  
+  {/* 3. High-Ranking Keywords */}
+  <meta
+    name="keywords"
+    content={`${selectedTools.map(t => t.name + " vs").join(' ')} comparison, best AI tools comparison, pricing vs features, tool alternatives 2026`}
+  />
 
-         {/* ✅ SCHEMA: ItemList (Comparison) */}
+  <link rel="canonical" href={`https://aitoolsfordev.com/compare/${slugs}`} />
+
+  {/* 4. Open Graph for Social Comparison */}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={`${title}: Side-by-Side Comparison`} />
+  <meta property="og:description" content="Check out our deep dive comparison. We analyze pricing, pros, and cons of these top AI tools." />
+
+  {/* 5. 🚀 UPGRADED SCHEMA: Product Comparison (Google understands 'vs' better this way) */}
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "ItemList",
+      "@type": "Product",
       "name": `${title} Comparison`,
-      "itemListElement": selectedTools.map((tool, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": tool.name,
-          "applicationCategory": tool.category,
-          "operatingSystem": "Web",
-          "url": `https://aitoolsfordev.com/tools/${tool.slug}`
-        }
-      }))
+      "description": `Side-by-side comparison of ${selectedTools.map(t => t.name).join(', ')}.`,
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": selectedTools.length,
+        "itemListElement": selectedTools.map((tool, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": tool.name,
+            "applicationCategory": tool.category,
+            "operatingSystem": "Web",
+            "url": `https://aitoolsfordev.com/tools/${tool.slug}`,
+            "offers": {
+              "@type": "Offer",
+              "price": "0", // Default to free or dynamic price if available
+              "priceCurrency": "USD"
+            }
+          }
+        }))
+      }
     })}
   </script>
-      </Helmet>
+</Helmet>
 
       <div className="max-w-6xl mx-auto">
 
