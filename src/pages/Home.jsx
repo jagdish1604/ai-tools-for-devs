@@ -8,6 +8,9 @@ import DarkModeToggle from "../components/DarkModeToggle";
 import SortDropdown from "../components/SortDropdown";
 import ToolModal from "../components/ToolModal";
 import FeaturedCarousel from "../components/FeaturedCarousel";
+import { Helmet } from "react-helmet-async";
+
+
 
 const EmailSignup = lazy(() => import("../components/EmailSignup"));
 
@@ -80,6 +83,69 @@ export default function Home() {
   return (
     <div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
 
+      <Helmet>
+  {/* 1. Primary Meta Tags - Enhanced for CTR (Click Through Rate) */}
+  <title>240+ Best AI Tools for Developers (2026) | Free Developer Hub</title>
+  <meta 
+    name="description" 
+    content="The ultimate directory of 240+ AI tools for developers. Free built-in JSON Formatter, Regex Tester, and AI coding assistants. Updated weekly for 2026." 
+  />
+  <meta name="keywords" content="AI tools for developers, free json formatter, regex tester online, AI coding tools 2026, best dev tools hub, artificial intelligence for programmers" />
+  <link rel="canonical" href="https://aitoolsfordev.com/" />
+  
+  {/* 2. Mobile & Web Performance Tags */}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="theme-color" content="#4f46e5" /> {/* Matches your indigo theme */}
+  <meta name="robots" content="index, follow" />
+
+  {/* 3. Open Graph - For Viral Sharing (WhatsApp, LinkedIn, FB) */}
+  <meta property="og:site_name" content="AI Tools Hub" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="240+ AI Tools to Supercharge Your Development" />
+  <meta property="og:description" content="Stop searching, start building. Access 240+ curated AI tools and free developer utilities in one place." />
+  <meta property="og:url" content="https://aitoolsfordev.com/" />
+  <meta property="og:image" content="https://aitoolsfordev.com/Sitelogo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  {/* 4. Twitter - Optimized for Dev Community */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@aitoolshub" /> {/* Agar Twitter account hai toh handle dalo */}
+  <meta name="twitter:title" content="The Best AI Directory for Developers" />
+  <meta name="twitter:description" content="Curated list of 240+ AI tools + Free Built-in JSON & Regex Utilities." />
+  <meta name="twitter:image" content="https://aitoolsfordev.com/Sitelogo.png" />
+
+  {/* 5. 🚀 ADVANCED SCHEMA (JSON-LD) - Helping Google understand your content */}
+  <script type="application/ld+json">
+    {JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI Tools Hub",
+        "url": "https://aitoolsfordev.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://aitoolsfordev.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Tools Hub",
+        "url": "https://aitoolsfordev.com/",
+        "logo": "https://aitoolsfordev.com/Sitelogo.png",
+        "sameAs": [
+          "https://twitter.com/yourhandle",
+          "https://github.com/yourrepo"
+        ]
+      }
+    ])}
+  </script>
+</Helmet>
+
+
+
       {/* 🌈 HERO */}
       <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-6 py-14 flex justify-between items-start gap-6">
@@ -147,6 +213,60 @@ export default function Home() {
           />
           <SortDropdown value={sort} onChange={setSort} />
         </div>
+        {/* 🧰 Developer Tools */}
+<section className="mb-14">
+  <h2 className="text-2xl font-bold mb-4 dark:text-white">
+    🧰 Developer Tools
+  </h2>
+
+  <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-3xl">
+    Free, fast, and privacy-friendly developer utilities built into AI Tools Hub.
+    No sign-up. Runs entirely in your browser.
+  </p>
+
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    {/* JSON Formatter */}
+    <a
+      href="/dev-tools/json-formatter"
+      className="group rounded-2xl p-6
+    bg-white dark:bg-slate-800
+    border border-slate-200 dark:border-slate-700
+    text-slate-800 dark:text-slate-200
+    shadow hover:shadow-lg
+    transition-all duration-200"
+    >
+      <div className="text-3xl mb-3">🧾</div>
+      <h3 className="text-lg font-bold mb-1 group-hover:text-indigo-600">
+        JSON Formatter & Tree Viewer
+      </h3>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        Format, minify, validate, and visually explore JSON data.
+      </p>
+    </a>
+
+    {/* Regex Tester */}
+    <a
+      href="/dev-tools/regex-tester"
+      className="group rounded-2xl p-6
+    bg-white dark:bg-slate-800
+    border border-slate-200 dark:border-slate-700
+    text-slate-800 dark:text-slate-200
+    shadow hover:shadow-lg
+    transition-all duration-200"
+    >
+      <div className="text-3xl mb-3">🔍</div>
+      <h3 className="text-lg font-bold mb-1 group-hover:text-indigo-600">
+        Regex Tester
+      </h3>
+      <p className="text-sm text-slate-600 dark:text-slate-400">
+        Test, debug, and validate regular expressions instantly.
+      </p>
+    </a>
+
+  </div>
+</section>
+
 
         {/* CATEGORY LINKS */}
         <div className="flex flex-wrap gap-2 mb-10">
@@ -213,6 +333,7 @@ export default function Home() {
         ChatGPT Alternatives for Developers
       </Link>
     </li>
+    
   </ul>
 </section>
 

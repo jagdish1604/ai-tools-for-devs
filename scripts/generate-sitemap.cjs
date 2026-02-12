@@ -5,6 +5,12 @@ const tools = require("../src/data/tools.json");
 
 const DOMAIN = "https://aitoolsfordev.com";
 
+const devToolPages = [
+  "/dev-tools/regex-tester",
+  "dev-tools/json-formatter"
+];
+
+
 /* -----------------------------
    Static pages
 ------------------------------ */
@@ -58,7 +64,8 @@ const urls = [
   ...staticPages,
   ...toolPages,
   ...categoryPages,
-  ...comparePages
+  ...comparePages,
+  ...devToolPages
 ];
 
 /* -----------------------------

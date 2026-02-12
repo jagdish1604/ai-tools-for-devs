@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Advertise() {
   useEffect(() => {
@@ -8,6 +10,50 @@ export default function Advertise() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 px-4 py-12">
+      <Helmet>
+  {/* 1. Conversion-Focused Title */}
+  <title>Advertise Your AI Tool | Reach 10,000+ Developers & Founders</title>
+  
+  {/* 2. Benefit-Driven Description (Click-worthy) */}
+  <meta
+    name="description"
+    content="Boost your AI tool's growth. Advertise on AI Tools Hub to reach a targeted audience of developers, CTOs, and tech founders. Get high-quality traffic and early adopters today."
+  />
+  
+  {/* 3. Strategic B2B Keywords */}
+  <meta
+    name="keywords"
+    content="promote AI startup, advertise AI tool, AI tool directory listing, software sponsorship, developer marketing, feature AI product, reach tech founders, SaaS advertising"
+  />
+
+  <link rel="canonical" href="https://aitoolsfordev.com/advertise" />
+
+  {/* 4. Open Graph - Professional Branding */}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Get Your AI Tool in Front of the Right Audience" />
+  <meta property="og:description" content="Join 240+ elite AI tools. Feature your product on AI Tools Hub and scale your user base with targeted developer traffic." />
+  <meta property="og:url" content="https://aitoolsfordev.com/advertise" />
+  <meta property="og:image" content="https://aitoolsfordev.com/advertise-og.png" /> {/* Dedicated image showing stats or 'Feature Your Tool' banner */}
+
+  {/* 5. 🚀 Professional Service Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Advertising Service",
+      "provider": {
+        "@type": "Organization",
+        "name": "AI Tools Hub",
+        "url": "https://aitoolsfordev.com/"
+      },
+      "description": "Premium advertising and featured listing services for Artificial Intelligence software and developer tools.",
+      "offers": {
+        "@type": "Offer",
+        "description": "Featured Tool Listing and Newsletter Sponsorship"
+      }
+    })}
+  </script>
+</Helmet>
       <div className="max-w-4xl mx-auto">
 
         {/* 🔙 Back */}

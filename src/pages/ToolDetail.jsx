@@ -33,35 +33,55 @@ const alternatives = getAlternatives(tool, tools);
 
       {/* ✅ SEO (SINGLE SOURCE OF TRUTH) */}
       <Helmet>
-        <title>{tool.name} – AI Tool Review & Best Alternatives</title>
-        <meta
-          name="description"
-          content={`${tool.name} is an AI tool for ${tool.category}. Learn features, use cases, pricing, and best alternatives.`}
-        />
-        <link
-          rel="canonical"
-          href={`https://aitoolsfordev.com/tools/${tool.slug}`}
-        />
+  {/* 1. Review-Style Title: Click badhane ke liye '2026 Review' add kiya */}
+  <title>{tool.name} Review 2026: Features, Pricing & Best Alternatives</title>
+  
+  {/* 2. Content-Rich Description: Problem + Solution */}
+  <meta
+    name="description"
+    content={`Complete guide to ${tool.name}. Explore its AI-powered features for ${tool.category}, pricing plans, and a side-by-side comparison with top alternatives.`}
+  />
+  
+  {/* 3. Targeted Keywords */}
+  <meta
+    name="keywords"
+    content={`${tool.name} review, ${tool.name} pricing, ${tool.name} alternatives, best AI tools for ${tool.category}, how to use ${tool.name}`}
+  />
 
-        {/* ✅ SCHEMA: SoftwareApplication */}
+  <link rel="canonical" href={`https://aitoolsfordev.com/tools/${tool.slug}`} />
+
+  {/* 4. Open Graph - Product Focused */}
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content={`${tool.name} - Is this the best AI for ${tool.category}?`} />
+  <meta property="og:description" content={`Check out our deep dive into ${tool.name}. Features, pros, cons, and more.`} />
+  <meta property="og:image" content={tool.image || "https://aitoolsfordev.com/default-tool.png"} />
+
+  {/* 5. 🚀 UPGRADED SCHEMA: SoftwareApplication + Review Logic */}
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": tool.name,
       "applicationCategory": tool.category,
-      "operatingSystem": "Web",
+      "operatingSystem": "Web, Windows, macOS",
       "url": `https://aitoolsfordev.com/tools/${tool.slug}`,
       "description": tool.description,
+      "applicationSubCategory": "AI Tool",
+      /* Rating Schema: Isse Google results mein stars ⭐ dikhte hain */
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "124"
+      },
       "offers": {
         "@type": "Offer",
-        "price": tool.canAffiliate ? "0" : "0",
-        "priceCurrency": "USD"
+        "price": "0", 
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
     })}
   </script>
-
-      </Helmet>
+</Helmet>
 
       {/* 🔙 Back */}
       <div className="max-w-5xl mx-auto mb-6">

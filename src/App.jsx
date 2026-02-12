@@ -13,6 +13,8 @@ import AiToolsForReactDevelopers from "./pages/seo/AiToolsForReactDevelopers";
 import FreeAiToolsForCoding from "./pages/seo/FreeAiToolsForCoding";
 import ChatGptAlternativesForDevelopers from "./pages/seo/ChatGptAlternativesForDevelopers";
 import ComparePage from "./pages/ComparePage";
+import RegexTester from "./pages/RegexTester";
+import JsonFormatter from "./pages/JsonFormatter";
 
 
 
@@ -50,6 +52,8 @@ function App() {
   element={<AiToolsForReactDevelopers />}
 />
 <Route path="/compare/:slugs" element={<ComparePage />} />
+<Route path="/dev-tools/regex-tester" element={<RegexTester />} />
+<Route path="/dev-tools/json-formatter" element={<JsonFormatter />} />
 
 
   </Routes>
